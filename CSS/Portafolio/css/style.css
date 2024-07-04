@@ -1,0 +1,51 @@
+/*normalizar todo*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Configurar tipo de letra para el contenido*/
+body{
+  font-family: 'Nunito Variable', sans-serif;
+  font-size: 1rem;
+}
+
+/*Darle otra letra a los titulos*/
+h1, h2, h3,h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+/*Darle margen hacia abajo al header*/
+/*otra manera es amargin: 10px 0px que seria para arriba y abajo 10px y a los lados 0px*/
+header {
+  margin: 10px 0px; /*en orden es arriba derecha abajo izquierda*/
+}
+
+/*Poner la lista en linea y darles una sombra gris*/
+.navigation-item {
+  display:  inline-block;
+  background-color: #777474;
+  border-radius: 0.3rem;
+
+  & > a {
+    text-decoration: none;
+    color: aqua;
+    display: inline-block;
+    padding: 0.2rem;
+  }
+
+  &[active]{
+    background-color: #524f4f;
+  }
+}
+
+/**/
+.navigation-item:hover {
+  background-color: #d16868;
+  cursor: pointer;
+}

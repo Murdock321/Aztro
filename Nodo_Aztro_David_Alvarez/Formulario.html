@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Formulario">
+    <link rel="shortcut icon" href="./gorilla.png" />
+    <title>Formulario de Inscripcion</title>
+</head>
+
+<header>
+  <a href="./index.html"><img src="./gorilla_7336335.png" alt="pura pagina de gorila" width="100" height="100"/></a>
+  <h2>Formulario de Inscripcion</h2>
+  <p>Los espacios que poseen asterisco (*) son obligatorios</p>
+</header>
+
+<body>
+  <form method="post" action="post">
+    <fieldset>
+      <legend><b>Ingrese sus datos</b></legend>
+      <label>Nombre: <input aria-required="true" type="text" id="first_name" name="first_name" placeholder="Pepito"/></label>*<br/>
+      <label>Apellido: <input aria-required="true" type="text" id="last_name" name="last_name" placeholder="Ruiz"/></label>*<br/>
+      <label>Correo: <input aria-required="true" type="email" name="email" placeholder="Ej pepito.ruiz@gmail.com"/></label>*<br/>
+      <label>Escriba de nuevo su correo: <input aria-required="true" type="email" name="email2" placeholder="Ej pepito.ruiz@gmail.com" autocomplete="off"/></label>*<br/>
+    </fieldset><br/>
+
+    <fieldset>
+      <legend><b>Lugar de residencia</b></legend>
+      <label>Pais: </label>*<br/>
+      <select name="country" id="country">
+        <optgroup label="Pais">
+          <option value="" selected disabled>--Seleccione--</option>
+          <option value="canada">Canada</option>
+          <option value="mexico">Mexico</option>
+          <option value="honduras">Honduras</option>
+          <option value="salvador">Salvador</option>
+          <option value="costa-rica">Costa Rica</option>
+          <option value="republica-dominicana">Republica Dominicana</option>
+          <option value="panama">Panama</option>
+          <option value="colombia">Colombia</option>
+          <option value="venezuela">Venezuela</option>
+          <option value="brasil">Brasil</option>
+          <option value="peru">Peru</option>
+          <option value="ecuador">Ecuador</option>
+          <option value="bolivia">Bolivia</option>
+          <option value="uruguay">Uruguay</option>
+          <option value="paraguay">Paraguay</option>
+          <option value="chile">Chile</option>
+          <option value="argentina">Argentina</option>
+        </optgroup>
+      </select> <br/>
+
+      <label>Departamento: </label>*<br/>
+      <select name="deptos" id="deptos">
+        <optgroup label="Departamento">
+          <option value="" selected disabled>--Seleccione--</option>
+          <option value="Amazonas">Amazonas</option>
+          <option value="Antioquia">Antioquia</option>
+          <option value="Arauca">Arauca</option>
+          <option value="Atlantico">Atlántico</option>
+          <option value="Bogota, D.C.">Bogotá, D.C.</option>
+          <option value="Bolivar">Bolívar</option>
+          <option value="Boyaca">Boyacá</option>
+          <option value="Caldas">Caldas</option>
+          <option value="Caqueta">Caquetá</option>
+          <option value="Casanare">Casanare</option>
+          <option value="Cauca">Cauca</option>
+          <option value="Cesar">Cesar</option>
+          <option value="Chocó">Chocó</option>
+          <option value="Córdoba">Córdoba</option>
+          <option value="Cundinamarca">Cundinamarca</option>
+          <option value="Guainia">Guainía</option>
+          <option value="Guaviare">Guaviare</option>
+          <option value="Huila">Huila</option>
+          <option value="La Guajira">La Guajira</option>
+          <option value="Magdalena">Magdalena</option>
+          <option value="Meta">Meta</option>
+          <option value="Nariño">Nariño</option>
+          <option value="Norte de Santander">Norte de Santander</option>
+          <option value="Putumayo">Putumayo</option>
+          <option value="Quindio">Quindío</option>
+          <option value="Risaralda">Risaralda</option>
+          <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+          <option value="Santander">Santander</option>
+          <option value="Sucre">Sucre</option>
+          <option value="Tolima">Tolima</option>
+          <option value="Valle del Cauca">Valle del Cauca</option>
+          <option value="Vaupes">Vaupés</option>
+          <option value="Vichada">Vichada</option>
+        </optgroup>
+      </select><br/><br/>
+
+      <label>Ciudad: <input type="text" name="city" placeholder="Ej Bello"/></label><br/>
+      <label>Direccion: <input type="text" name="addres" placeholder="Cr 1 #3-4"/></label><br/>
+    </fieldset><br/>
+    <fieldset>
+      <legend><b>Acerca de ti</b></legend>
+      <p>Escribe una pequeña reseña acerca de ti para conocernos mejor (Hobbies, videojuegos favoritos entre otros)</p>
+      <textarea name="aboutyou" id="aboutyou" rows="10" cols="100" maxlength="300" placeholder="Maximo 300 caracteres"></textarea>
+    </fieldset><br/>
+
+    <fieldset>
+      <!--colocar el asterisco para mencionar que es obligatorio-->
+      <legend><b>Programa</b></legend>
+      <label for="curso">Escoge el programa al que deseas inscribirte*</label><br>
+      <select name="courses" id="courso" aria-required="true">
+        <optgroup label="Cursos">
+          <option value="HTML" selected disabled>--Seleccione--</option>
+          <option value="jtbd">Jobs to be done</option>
+          <option value="cloud">Cloud Native</option>
+          <option value="front">Frontend</option>
+          <option value="back">Backend</option>
+          <option value="fundamentals">Fundamentals</option>
+          <option value="python">Python</option>
+          <option value="mdigital">Marketing digital</option>
+        </optgroup>
+      </select>
+    </fieldset><br/>
+
+    <fieldset>
+      <legend><b>Que modalidad deseas ?</b></legend>
+      <label for="pres-virtual">Escoge la modalidad en la que desea recibir tu formacion*</label><br>
+      <select name="modalidad" id="pres-virtual">
+        <option value="" selected disabled>--Seleccione--</option>
+        <option value="presencial">Presencial</option>
+        <option value="virtual">Online</option>
+      </select>
+    </fieldset><br/>
+    <fieldset>
+      <legend><b>Esta trabajando actualmente?</b></legend>
+      <div>
+        <input type="radio" id="trabajosi" name="trabajosi"/>
+        <label for="trabajosi">Si</label>
+        <input type="radio" id="trabajono" name="trabajono"/>
+        <label for="trabajono">No</label>
+      </div>
+    </fieldset><br/>
+
+    <button type="submit">Enviar</button> 
+    <button type="reset">Limpiar</button>
+  </form><br/>
+  <p><a href="./index.html#options">Regresar a la ventana principal</a></p>
+</body>
+</html>
