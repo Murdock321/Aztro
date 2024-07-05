@@ -4,9 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./apprectangulo.js"></script>
+  <link href="../CSS/style.css" rel="stylesheet" >
+  <link href="../CSS/fonts.css" rel="stylesheet">
   <title>Rectangulo</title>
 </head>
 <body>
-  
+  <h2>Rectangulo!</h2><br>
+  <p>Calculadora de area, perimetro y diagonal</p>
+  <label for="base_rectangulo">
+    Base: <input aria-required="true" type="number" id="base_rectangulo" name="base_rectangulo" placeholder="Escribe la base"/>
+  </label>
+  <br>
+  <label for="altura_rectangulo">
+    Altura: <input aria-required="true" type="number" id="altura_rectangulo" name="altura_rectangulo" placeholder="Escribe la altura"/>
+  </label><br><br>
+
+  <fieldset>
+    <legend><p><strong>Resultados</strong></p><br></legend>
+    <label for="area_rectangulo">
+      Area (cm2): <input type="number" id="area_rectangulo" name="area_rectangulo"/>
+    </label><br>
+    <label for="perimetro_rectangulo">
+      Perimetro (cm): <input type="number" id="perimetro_rectangulo" name="perimetro_rectangulo"/>
+    </label><br>
+    <label for="diagonal_rectangulo">
+      Diagonal (cm): <input type="number" id="diagonal_rectangulo" name="diagonal_rectangulo"/>
+    </label>
+  </fieldset><br>
+  <a href="../index.html">Atras</a>
 </body>
 </html>
