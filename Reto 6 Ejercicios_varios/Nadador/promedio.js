@@ -1,21 +1,30 @@
 function promediop() {
-  let a = parseFloat(document.getElementById("base_rectangulo").value);
-  let b = parseFloat(document.getElementById("altura_rectangulo").value);
-  let c = parseFloat(document.getElementById("altura_rectangulo").value);
-  let d = parseFloat(document.getElementById("altura_rectangulo").value);
-  let e = parseFloat(document.getElementById("altura_rectangulo").value);
 
-  if (a != 0 && b != 0 && c != 0 && d != 0 && e != 0){
+  let a = parseFloat(document.getElementById("lap1").value);
+  let b = parseFloat(document.getElementById("lap2").value);
+  let c = parseFloat(document.getElementById("lap3").value);
+  let d = parseFloat(document.getElementById("lap4").value);
+  let e = parseFloat(document.getElementById("lap5").value);
+
+  if (a != null && b != null && c != null && d != null && e != null){
     divisor = 5;
-  }
-  else if (a == 0 || b == 0 || c == 0 || d == 0 || e == 0){
-    window.alert("Te ha faltado alguna informacion");
-  }
-  else {
-    divisor="Aun no has dado laps";
+    alert("aqui")
   }
 
   let promedio = (a+b+c+d+e)/5;
-  document.getElementById("result").value = promedio;
-  document.getElementById("result").value = promedio;
+  alert(promedio)
+  document.getElementById("result").value = promedio.toFixed(3);
 }
+
+/* ejecutable en terminal
+
+function promediop(a,b,c,d,e) {
+
+  if (a != null && b != null && c != null && d != null && e != null){
+    divisor = 5;
+  }
+  let promedio = (a+b+c+d+e)/divisor;
+  console.log(`Promedio ${(promedio.toFixed(3))} segundos`)
+}
+
+console.log(promediop(5.789,2.2143523,3.546,4.7868,5.3))*/
