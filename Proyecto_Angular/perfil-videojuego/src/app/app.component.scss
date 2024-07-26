@@ -36,11 +36,6 @@ main{
   flex-direction: row;
 }
 
-.noticias{
-  width: 40%;
-  background-color: $oscuro;
-}
-
 .perfil{
   width: 60%;
   display: flex;
@@ -138,19 +133,19 @@ main{
   color: #3f579a;
 }
 
-.perfil__ubicacion--place {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: start;
-  padding-top: 0.7rem;
-  padding-left: 1rem;
-}
-
 .perfil__ubicacion h2 {
   text-transform: uppercase;
-  text-align: left;
-  padding-bottom: 0.5rem;
+  justify-content: left;
+  text-align:start;
+  padding-bottom: 2.5rem;
+}
+
+.perfil__ubicacion h3 {
+  text-transform: uppercase;
+  justify-content: left;
+  text-align:right;
+  padding-top: 4rem;
+  padding-right: 5rem;
 }
 
 .perfil--galeria {
@@ -161,17 +156,17 @@ main{
   justify-content: space-between;
   border-radius: 1.4rem;
   box-shadow: 0 1rem 2rem 0 rgba(71, 69, 69, 0.75);
-  padding: 1.2rem;
+  padding: 1.5rem;
 }
 
 .perfil--galeria h2 {
   text-transform: uppercase;
-  align-items: start;
   text-align: left;
 }
 
 .galeria__imagenes {
   display: grid;
+  height: 100%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   height: 10rem;
@@ -179,47 +174,32 @@ main{
   padding-right: 2rem;
 }
 
-.imagenes--foto1 {
+.galeria__foto--1 {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
-  background-image: url(../assets/img/galeria1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  border-radius: 1rem;
 }
 
-.imagenes--foto2 {
+.galeria__foto--2 {
   grid-column: 3 / 5;
   grid-row: 1 / 2;
-  background-image: url(../assets/img/galeria2.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  width: 100%;
+  border-radius: 1rem;
 }
 
-.imagenes--foto3 {
+.galeria__foto--3 {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
-  background-image: url(../assets/img/galeria3.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  border-radius: 1rem;
 }
 
-.imagenes--foto4 {
+.galeria__foto--4 {
   grid-column: 4 / 5;
   grid-row: 2 / 3;
-  background-image: url(../assets/img/galeria4.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  border-radius: 1rem;
 }
 
-.fotos {
-  border-radius: 0.8rem;
-}
-
-.noticias {
+.articulos {
   width: 50%;
   display: flex;
   flex-direction: column;
