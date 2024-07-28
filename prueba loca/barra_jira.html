@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="progress-bar">
+    <div class="progress" style="width: 100%"></div>
+  </div>
+  <div class="progress-text">0% hecho</div>
+
+  <script>
+    // Agregamos un script para actualizar el progreso
+    const progressBar = document.querySelector('.progress-bar .progress');
+    const progressText = document.querySelector('.progress-text');
+
+    let progress = 0;
+    
+    setInterval(() => {
+      progress += 10;
+      progressBar.style.width = `${progress}%`;
+      progressText.textContent = `${progress}% hecho`;
+      if (progress >= 100) {
+        clearInterval();
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>

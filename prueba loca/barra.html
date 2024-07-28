@@ -1,0 +1,85 @@
+
+```
+
+### 2. Estructura del Componente
+
+**progress-bar.component.html**
+
+```html
+<div class="progress-container">
+  <div class="progress-bar" [ngStyle]="{ width: progress + '%' }"></div>
+</div>
+```
+
+**progress-bar.component.css**
+
+```css
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+```
+
+**progress-bar.component.ts**
+
+```typescript
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-progress-bar',
+  templateUrl: './progress-bar.component.html',
+  styleUrls: ['./progress-bar.component.css']
+})
+export class ProgressBarComponent {
+  @Input() progress: number = 0;
+}
+```
+
+### 3. Usar el Componente en tu Aplicación
+
+Para usar el componente de la barra de progreso, agrégalo a un componente padre y proporciona un valor para la propiedad `progress`.
+
+**app.component.html**
+
+```html
+<app-progress-bar [progress]="currentProgress"></app-progress-bar>
+<button (click)="increaseProgress()">Increase Progress</button>
+```
+
+**app.component.ts**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  currentProgress: number = 0;
+
+  increaseProgress() {
+    if (this.currentProgress < 100) {
+      this.currentProgress += 10;
+    }
+  }
+}
+```
+
+### 4. Explicación
+
+1. **progress-bar.component.ts**: Define un componente con una propiedad de entrada `progress` que controla el ancho de la barra de progreso.
+2. **progress-bar.component.html**: Usa `ngStyle` para ajustar el ancho de la barra según el valor de `progress`.
+3. **progress-bar.component.css**: Estiliza la barra de progreso con un contenedor y una barra interna.
+4. **app.component.html**: Usa el componente de la barra de progreso y proporciona un botón para aumentar el progreso.
+
+Este ejemplo básico debería ayudarte a comenzar con una barra de progreso en Angular. Puedes personalizarlo aún más para ajustarlo a tus necesidades específicas.
