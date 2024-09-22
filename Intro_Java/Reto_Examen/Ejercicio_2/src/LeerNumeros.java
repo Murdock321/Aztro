@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class LeerNumeros{
   public float leer() {
-    String rutaArchivo = "C:\\Users\\Administrador\\Desktop\\Numeros.txt";
+    String rutaArchivo = ("Numeros.txt");
     Float numero = null;
 
     try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
